@@ -82,6 +82,9 @@ var TypeaheadCompo = mask.Compo({
 	},
 	type_: 'object',
 	prepair_ (arr) {
+		if (arr == null)
+			return [];
+			
 		if (arr.length === 0) 
 			return arr;
 		

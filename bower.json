@@ -1,12 +1,12 @@
 {
     "name": "compo-typeahead",
-    "version": "0.8.3",
-    "homepage": "https://github.com/atmajs/compo-lazy",
+    "version": "0.8.4",
+    "homepage": "https://github.com/atmajs/compo-typeahead",
     "authors": [
         "Alex Kit <alex.kit@atmajs.com>"
     ],
-    "description": "MaskJS lazy render component (Atma.js)",
-    "main": "lib/lazy.js",
+    "description": "Typeahead wrapper for MaskJS",
+    "main": "lib/typeahead.js",
     "license": "MIT",
     "ignore": [
         "**/.*",
