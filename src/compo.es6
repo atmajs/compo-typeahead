@@ -1,11 +1,10 @@
 var TypeaheadCompo = mask.Compo({
-	template: `
-		input.typeahead
-			id='~[: $a.id]'
-			type=text
-			value='~[: $a.value]'
-			style='vertical-align: middle';
-	`,
+	tagName: 'input',
+	attr: {
+		class: 'typeahead',
+		type: 'text',
+		style: 'vertical-align:middle'
+	},
 	meta: {
 		attributes: {
 			'x-prop-id': 'string',
@@ -119,7 +118,8 @@ var TypeaheadCompo = mask.Compo({
 	get: function(){
 		var text = this.compos.input.val(),
 			arr, property;
-		
+		if (this.type_ === 'text') 
+			return text;
 		if (this.xProp) {
 			arr = this.model[this.xProp];
 			property = this.xPropText;
