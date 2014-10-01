@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<script src='/bower_components/es6-shim/es6-shim.js'></script>
+	<script src='/bower_components/includejs/lib/include.js'></script>
+	<script src='/bower_components/jquery/dist/jquery.js'></script>
+	<script src='/bower_components/maskjs/lib/mask.js'></script>
+	
+	<script src='/lib/typeahead.js'></script>
+	<script type='text/mask' data-run="true">
+		h6 > 'E.g: type "T" '
+		a:typeahead #foo
+			dropdown
+			x-prop = foo
+			x-prop-id = Id
+			x-prop-text = Title
+			;
+	</script>
+	<script type='application/javascript'>
+		include.allDone(function(){
+			window.app = mask.run({
+				foo: [
+					{
+						Id : 'a-id',
+						Title: 'A Title'
+					},
+					{
+						Id : 'b-id',
+						Title: 'B Title'
+					},
+					{
+						Id : 'c-id',
+						Title: 'C Title'
+					},
+					{
+						Id : 'd-id',
+						Title: 'D Title'
+					},
+				]
+			});
+		})
+		
+	</script>
+</body>
+</html>
